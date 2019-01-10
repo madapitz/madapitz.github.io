@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+	// console.log($(window).width());
+
 	//animacion para el hamburger menu
 	var abierto = false;
 

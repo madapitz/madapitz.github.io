@@ -39,7 +39,7 @@
 }
 
 .menu-der ul{
-	margin-top: 30%;
+	margin-top: 25%;
 	text-align: center;
 	color: black;
 	font-family: Montserrat, sans-serif;
@@ -58,6 +58,14 @@
 	color: #111;
 }
 
+.menu-der .rsocial{
+	margin-top: 10%;
+}
+
+.menu-der .rsocial a{
+	margin-right: 3%;
+	margin-left: 3%;
+}
 
 /*-----------------*/
 
