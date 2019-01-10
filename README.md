@@ -1,2 +1,2 @@
 # madapitz.github.io
-## Portafolio Persona (EN CONSTRUCCION)
+## Portafolio Personal (EN CONSTRUCCION)
