@@ -1,7 +1,97 @@
 $(document).ready(function() {
 	//animacion para el hamburger menu
+	var abierto = false;
+
+	function abrir_menu(){
+		anime({
+				targets: '.menu',
+				width: '100%',
+				easing: 'easeInOutQuad',
+				direction: 'normal',
+				loop: false
+			});
+
+			anime({
+				targets: '.menu-izq',
+				width: '50%',
+				easing: 'easeInOutQuad',
+				direction: 'normal',
+				loop: false
+			});
+
+			anime({
+				targets: '.menu-der',
+				width: '50%',
+				easing: 'easeInOutQuad',
+				direction: 'normal',
+				delay: 1000,
+				loop: false
+			});
+
+			anime({
+				targets: '.menu-der ul',
+				fontSize: '2em',
+				easing: 'linear',
+				direction: 'normal',
+				delay:1100,
+				loop:false
+			});
+	}
+
+	function cerrar_menu(){
+			anime({
+				targets: '.menu-der ul',
+				fontSize: '0em',
+				easing: 'linear',
+				direction: 'normal',
+				loop:false
+			});
+
+			anime({
+				targets: '.menu-der',
+				width: '0%',
+				easing: 'easeInOutQuad',
+				direction: 'normal',
+				delay:200,
+				loop: false
+			});
+
+			anime({
+				targets: '.menu-izq',
+				width: '0%',
+				easing: 'easeInOutQuad',
+				direction: 'normal',
+				delay:1000,
+				loop: false
+			});
+
+			anime({
+				targets: '.menu',
+				width: '0%',
+				easing: 'easeInOutQuad',
+				direction: 'normal',
+				delay:1000,
+				loop: false
+			});
+	}
+
+	function animar_menu(cond){
+		if (!cond) {
+			abrir_menu();
+
+			return true;
+		} else{
+			cerrar_menu();
+			
+			return false;
+		}
+	}
+
 	$(".icono").click(function(){
-		$(".icono").toggleClass("active");
+		// console.log(abierto);
+		$(this).toggleClass("active");
+		abierto = animar_menu(abierto);
+		
 	});
 
 	$(window).scroll(function(){
@@ -16,6 +106,13 @@ $(document).ready(function() {
 		} else if (scroll >= 2400) {
 			$(":root").get(0).style.setProperty("--color-hamb","#111");
 		}
+	});
+
+	//cerrar menu cuando se presiona un elemento del menu
+
+	$(".menu-der li").click(function(){
+		cerrar_menu();
+		abierto = false;
 	});
 
 	//animacion texto-home

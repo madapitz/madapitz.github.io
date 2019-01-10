@@ -13,6 +13,54 @@
 	
 }
 
+/*MENU*/
+
+.menu{
+	width: 0%;
+	height: 100%;
+	background: transparent;
+	position: fixed;
+	display: flex;
+	z-index: 3;
+}
+
+.menu-izq{
+	position: relative;
+	background: white;
+	width: 0%;
+	height: 100%;
+}
+
+.menu-der{
+	position: relative;
+	background: #ffc30b;
+	width: 0%;
+	height: 100%;
+}
+
+.menu-der ul{
+	margin-top: 30%;
+	text-align: center;
+	color: black;
+	font-family: Montserrat, sans-serif;
+	font-size: 0em;
+	font-weight: 700;
+	list-style: none;
+}
+
+.menu-der li{
+	margin-top: 8%;
+	cursor: pointer;
+}
+
+.menu-der a{
+	text-decoration: none;
+	color: #111;
+}
+
+
+/*-----------------*/
+
 :root{
 	--color-hamb:#fff;
 }
@@ -62,6 +110,7 @@
 
 #about{
 	z-index: 1;
+	position: relative;
 }
 
 .texto-about{
@@ -125,11 +174,13 @@
 .icono.active .hamburger:before{
 	top: 0;
 	transform: rotate(45deg);
+	background: white;
 }
 
 .icono.active .hamburger:after{
 	top: 0;
 	transform: rotate(135deg);
+	background: white;
 }
 
 .separador{
@@ -155,35 +206,21 @@
 	height: 90vh;
 }
 
-.taxi1, .taxi2{
-	position: relative;
-	width: 40vw;
-	height: 40vw;
-	border: 20px solid white;
-}
-
-.taxi1 img, .taxi2 img{
-	max-width:100%;
-	max-height:100%;
+.fotomia{
+	margin:5vh auto 20vh auto;
+	width: 30vh;
+	height: 40vh;
 
 }
 
-.taxi1 {
-	float: left;
-	left: 10vw;
-}
 
-.taxi2{
-	top: 20vh;
-	right: 10vw;
-	float: right;
-	z-index: 1;
-}
-
-.taxi1::after, .taxi2::after{
-	clear: both;
-	content: "";
-	display: table;
+.fotomia img{
+	width: 30vh;
+	height: auto;
+	border-radius: 10%;
+	-webkit-box-shadow: -22px 31px 77px -18px rgba(0,0,0,0.67);
+	-moz-box-shadow: -22px 31px 77px -18px rgba(0,0,0,0.67);
+	box-shadow: -22px 31px 77px -18px rgba(0,0,0,0.67);
 }
 
 
