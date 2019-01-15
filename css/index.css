@@ -518,5 +518,9 @@ footer{
 		left: 88vw;
 	}
 
+	.menu-izq{
+		display: none;
+	}
+
 }
 

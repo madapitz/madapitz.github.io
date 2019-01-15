@@ -41,6 +41,33 @@ $(document).ready(function() {
 			});
 	}
 
+	function abrir_menu_res(){
+		anime({
+				targets: '.menu',
+				width: '100%',
+				easing: 'easeInOutQuad',
+				direction: 'normal',
+				loop: false
+			});
+
+			anime({
+				targets: '.menu-der',
+				width: '100%',
+				easing: 'easeInOutQuad',
+				direction: 'normal',
+				loop: false
+			});
+
+			anime({
+				targets: '.menu-der ul',
+				fontSize: '2em',
+				easing: 'linear',
+				direction: 'normal',
+				delay:300,
+				loop:false
+			});
+	}
+
 	function cerrar_menu(){
 			anime({
 				targets: '.menu-der ul',
@@ -78,16 +105,58 @@ $(document).ready(function() {
 			});
 	}
 
-	function animar_menu(cond){
-		if (!cond) {
-			abrir_menu();
+	function cerrar_menu_res(){
+			anime({
+				targets: '.menu-der ul',
+				fontSize: '0em',
+				easing: 'linear',
+				direction: 'normal',
+				loop:false
+			});
 
-			return true;
-		} else{
-			cerrar_menu();
-			
-			return false;
+			anime({
+				targets: '.menu-der',
+				width: '0%',
+				easing: 'easeInOutQuad',
+				direction: 'normal',
+				delay:200,
+				loop: false
+			});
+
+			anime({
+				targets: '.menu',
+				width: '0%',
+				easing: 'easeInOutQuad',
+				direction: 'normal',
+				delay:1000,
+				loop: false
+			});
+	}
+
+	function animar_menu(cond){
+		if ($(window).width() > 450) {
+			if (!cond) {
+				abrir_menu();
+
+				return true;
+			} else{
+				cerrar_menu();
+				
+				return false;
+			}
+		} else {
+			if (!cond) {
+				abrir_menu_res();
+
+				return true;
+			} else{
+				cerrar_menu_res();
+				
+				return false;
+			}
+
 		}
+		
 	}
 
 	$(".icono").click(function(){
