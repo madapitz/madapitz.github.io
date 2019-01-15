@@ -115,6 +115,7 @@ $(document).ready(function() {
 
 	$(".menu-der li").click(function(){
 		cerrar_menu();
+		$(".icono").toggleClass("active");
 		abierto = false;
 	});
 

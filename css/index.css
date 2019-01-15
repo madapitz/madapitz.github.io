@@ -29,6 +29,10 @@
 	background: white;
 	width: 0%;
 	height: 100%;
+	background-image: url("../pictures/goda2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .menu-der{
@@ -247,8 +251,31 @@
 	color: white;
 }
 
+.contenedor-hab{
+	
+	margin-top: 20vh;
+	height: 50vh;
+	/*background-color: white;*/
+	overflow-x: hidden;
 
-#contenedor1, #contenedor2, #contenedor3, #contenedor4 {
+}
+
+.contenedor-hab-img{
+	margin-bottom: 2rem;
+}
+
+/*.row.row-hab{
+	margin-left: 10%;
+}
+*/
+.contenedor-hab-img img{
+	margin: 0 auto;
+	width: 8vw;
+	height: auto;
+
+}
+
+/*.contenedor-hab {
 	position: absolute;
 	margin-top: 40px;
 	top: 50vh;
@@ -258,7 +285,7 @@
 	  
 }
 
-#contenedor1 img, #contenedor2 img, #contenedor3 img, #contenedor4 img {
+.contenedor-hab img {
 	margin: 0 auto;
 	width: 100%;
 	height: auto;
@@ -278,7 +305,7 @@
 
 #contenedor4{
 	left: 80%;
-}
+}*/
 
 #services{
 	margin-top: 20vh;
@@ -480,5 +507,16 @@ footer{
     opacity: 0;
     transform: scale(0,0);
   }
+}
+
+@media (max-width: 450px) {
+	.imagen{
+		width: 90vw;
+	}
+
+	.icono{
+		left: 88vw;
+	}
+
 }
 
