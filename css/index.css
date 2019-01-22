@@ -352,11 +352,15 @@
 }
 
 .img-1{
-	background-image: url("../pictures/p1.png");
+	background-image: url("../pictures/docu.png");
 }
 
 .img-2{
 	background-image: url("../pictures/p2e.png");
+}
+
+.img-3{
+	background-image: url("../pictures/port2.png");
 }
 
 .hola{
@@ -412,6 +416,36 @@ footer{
 	transform: scale(1,1);
 	-webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+#cv{
+	margin-top: 10%;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url("../pictures/stp.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#cv h2{
+	top: 20%;
+	position: relative;
+	color: #189ad3;
+}
+
+#cv p{
+	position: relative;
+	top: 50%;
+	font-family: Montserrat;
+}
+
+#cv a{
+	font-size: 30px;
+	border-radius: 0;
+	font-weight: 700;
 }
 
 
@@ -520,6 +554,10 @@ footer{
 
 	.menu-izq{
 		display: none;
+	}
+
+	.texto-about{
+		font-size: 2em;
 	}
 
 }
